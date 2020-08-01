@@ -1,0 +1,234 @@
+/* CSS files add styling rules to your content */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "montserrat", arial, sans-serif;
+  cursor: url('https://cdn.glitch.com/1707f4fa-6e03-4299-94b0-751da2a79db3%2FdownArrow.svg?v=1595891410424'), auto;
+}
+
+.panel {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+
+.panel-a {
+  background: linear-gradient(132deg, rgba(181, 73, 69, .63), #b2c4e2);
+}
+
+.panel-b {
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+.panel-c {
+  background: linear-gradient(132deg, rgba(181, 73, 69, .63), #b2c4e2);
+}
+
+.panel-d {
+  background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);
+}
+
+.panel h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+.panel h4 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.panel h6 {
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.panel-a h1 {
+  font-size: 4.5rem;
+  max-width: 700px;
+}
+
+.panel-c h4 {
+  margin: 10px auto;
+  font-size: 1.5rem;
+}
+
+.track-list ul {
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.track-list ul li h5 {
+  font-size: 2.5rem;
+}
+
+.panel .center-btns a {
+  border: white solid 1px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.panel .center-btns a:hover {
+  background-color: white;
+  color: gray;
+}
+
+.panel-b .ep-art {
+  transform: translate(-300px);
+  opacity: 0;
+}
+
+.panel-b .ep-text {
+  max-width: 700px;
+}
+
+.center-btns {
+  margin: 10px auto;
+}
+
+.top-title {
+  position: fixed;
+  margin-bottom: 100px;
+  line-height: 3rem;
+}
+
+.secondary-title {}
+
+.ep-text {
+  opacity: 0;
+}
+
+.panel-d-artwork {
+  width: 150px;
+  height: 150px;
+  transition: border 0.5s;
+  border: solid rgba(0, 0, 0, 0) 4px;
+}
+
+.panel-d-artwork:hover {
+  border: white 4px solid;
+}
+
+.panel-d-artwork.unblur {
+  filter: blur(0);
+}
+
+.play-popup {
+  position: fixed;
+  right: -200px;
+  z-index: 2;
+  top: 20%;
+  transition: transform 0.3s;
+  width: 200px;
+}
+
+.play-popup.open {
+  transform: translate(-100%);
+}
+
+.play-popup .toggle-popup {
+  position: absolute;
+  top: 0;
+  left: -80px;
+  width: 80px;
+  background: none;
+  border: solid 2px rgba(0, 0, 0, 0);
+  transition: border 0.3s;
+  padding: 0px;
+}
+
+.play-popup .toggle-popup:hover {
+  border-color: rgba(245, 245, 245, 1);
+}
+
+.downward-arrow {
+  position: fixed;
+  width: 50px;
+  transform: rotate(90deg);
+  z-index: 2;
+  right: 20%;
+  opacity: 0.75;
+}
+
+@media(max-width: 1200px) {
+  .panel-a .top-title {
+    max-width: 500px;
+  }
+
+  .panel-a .secondary-title {
+    padding-top: 60px;
+  }
+
+  .panel-b h4 {
+    max-width: 600px;
+    font-size: 1.25rem;
+  }
+
+  .panel-b h1 {
+    max-width: 600px;
+    font-size: 3rem;
+    line-height: 2.75rem;
+  }
+
+  .panel-c h4 {
+    font-size: 1rem;
+  }
+
+  .panel-c ul li {
+    margin: 5px auto;
+  }
+
+  .panel-c .track-item {
+    max-width: 50%;
+    margin: 0 auto;
+    font-size: 2.25rem;
+    line-height: 2rem;
+  }
+
+  .play-popup .toggle-popup {
+    width: 50px;
+    left: -50px;
+  }
+
+  .panel-d h1 {
+    max-width: 600px;
+    line-height: 3rem;
+    font-size: 3.25rem;
+  }
+
+  .center-btns {
+    margin: 0px auto;
+  }
+}
+
+@media(max-width: 500px) {
+  .panel-c h4 {
+    margin: 0px auto;
+    font-size: 0.9rem;
+  }
+
+  .panel-c ul li {
+    margin: 8px 0;
+  }
+
+  .panel-c .track-item {
+    font-size: 1.25rem;
+    line-height: 1.1rem;
+  }
+
+}
