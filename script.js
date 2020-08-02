@@ -120,11 +120,9 @@ const openCloseImg = document.querySelector(".open-close-btn");
 togglePopup.addEventListener("click", function () {
   if (playPopup.classList.contains("open")) {
     playPopup.classList.remove("open");
-    openCloseImg.src =
-      "https://cdn.glitch.com/1707f4fa-6e03-4299-94b0-751da2a79db3%2Fplay.svg?v=1595936397096";
+    openCloseImg.src = "assets/play.svg";
   } else {
     playPopup.classList.add("open");
-    openCloseImg.src =
-      "https://cdn.glitch.com/1707f4fa-6e03-4299-94b0-751da2a79db3%2Fclose.svg?v=1595937966522";
+    openCloseImg.src = "assets/close.svg";
   }
 });
