@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "montserrat", arial, sans-serif;
   cursor: url("https://cdn.glitch.com/1707f4fa-6e03-4299-94b0-751da2a79db3%2FdownArrow.svg?v=1595891410424"),
@@ -45,6 +46,7 @@ body {
   font-size: 1.5rem;
   text-align: center;
 }
+
 .panel h6 {
   font-size: 0.9rem;
   text-align: center;
@@ -109,6 +111,12 @@ body {
   line-height: 3rem;
 }
 
+.secondary-title {
+  z-index: 4;
+  color: rgba(240, 105, 105, 0.9);
+  padding-top: 60px;
+}
+
 .ep-text {
   opacity: 0;
 }
@@ -165,6 +173,14 @@ body {
   opacity: 0.75;
 }
 
+.open-close-btn {
+  display: none;
+}
+
+.open-close-btn.showing {
+  display: block;
+}
+
 @media (max-width: 1200px) {
   .panel-a .top-title {
     max-width: 500px;
@@ -210,6 +226,7 @@ body {
     line-height: 3rem;
     font-size: 3.25rem;
   }
+
   .center-btns {
     margin: 0px auto;
   }

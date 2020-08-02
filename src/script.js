@@ -1,5 +1,8 @@
-gsap.registerPlugin(MotionPathPlugin);
-gsap.registerPlugin(ScrollTrigger);
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 const arrowTL = gsap.timeline();
 arrowTL
@@ -29,7 +32,7 @@ panelATL
   .from(".secondary-title", {
     opacity: 0,
     y: 100,
-    ease: Bounce.easeOut,
+    ease: "Bounce.easeOut",
     duration: 1,
   })
   .to(".top-title", {
@@ -115,14 +118,17 @@ gsap.from(".panel-d-artwork", {
 
 const togglePopup = document.querySelector(".toggle-popup");
 const playPopup = document.querySelector(".play-popup");
-const openCloseImg = document.querySelector(".open-close-btn");
+const openCloseImgPlay = document.querySelector(".open-close-btn--play");
+const openCloseImgClose = document.querySelector(".open-close-btn--close");
 
 togglePopup.addEventListener("click", function () {
   if (playPopup.classList.contains("open")) {
     playPopup.classList.remove("open");
-    openCloseImg.src = "assets/play.svg";
+    openCloseImgClose.classList.toggle("showing");
+    openCloseImgPlay.classList.toggle("showing");
   } else {
     playPopup.classList.add("open");
-    openCloseImg.src = "assets/close.svg";
+    openCloseImgPlay.classList.toggle("showing");
+    openCloseImgClose.classList.toggle("showing");
   }
 });

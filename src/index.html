@@ -13,36 +13,44 @@
       rel="stylesheet"
     />
     <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
 
-    <!-- import the webpage's javascript file -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.js"></script>
+    <!-- import the webpage's javascript file  OR use NPM-->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/MotionPathPlugin.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.js"></script>
-
-    <script src="script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/ScrollTrigger.js"></script> -->
   </head>
 
   <body>
     <img
       class="downward-arrow"
       alt="Arrow indicating user to scroll down"
-      src="assets/downArrow.svg"
+      src="downArrow.svg"
     />
     <div class="play-popup">
       <button class="toggle-popup" data-open="false">
-        <img class="open-close-btn" src="assets/play.svg" alt="toggle player" />
+        <img
+          class="open-close-btn open-close-btn--play showing"
+          src="play.svg"
+          alt="toggle player"
+        />
+        <img
+          class="open-close-btn open-close-btn--close"
+          src="close.svg"
+          alt="toggle player"
+        />
       </button>
       <div class="music-player">
         <iframe
-          style="border: 0; width: 200px; height: 538px;"
-          src="https://bandcamp.com/EmbeddedPlayer/album=941749135/size=large/bgcol=ffffff/linkcol=f171a2/transparent=true/"
+          style="border: 0; width: 240px; height: 520px;"
+          src="https://bandcamp.com/EmbeddedPlayer/album=3014625277/size=large/bgcol=ffffff/linkcol=f171a2/transparent=true/"
           seamless
-          ><a
-            href="http://sanssouci.bandcamp.com/album/blissy-ignorance-drink-your-youth"
-            >Blissy Ignorance/Drink Your Youth by Sanssouci</a
-          ></iframe
         >
+          <a
+            href="http://winterboyfriend.bandcamp.com/album/blissy-ignorance-drink-your-youth"
+            >Blissy Ignorance / Drink Your Youth by Winter Boyfriend</a
+          >
+        </iframe>
       </div>
     </div>
     <section class="panel panel-a">
@@ -56,7 +64,7 @@
     <section class="panel panel-b">
       <img
         class="ep-art"
-        src="assets/ep artwork 1200.jpg"
+        src="ep artwork 1200.jpg"
         alt="Winter Boyfriend's Blissy Ignorance/Drink Your Youth EP artwork - view of trees by a lake and a label in style of traditional classical records giving bandname and title."
       />
       <h4 class="ep-text">
@@ -110,10 +118,10 @@
       </h6>
       <img
         class="panel-d-artwork"
-        src="assets/ep artwork 1200.jpg"
+        src="ep artwork 1200.jpg"
         alt="Winter Boyfriend's Blissy Ignorance/Drink Your Youth EP artwork - view of trees by a lake and a label in style of traditional classical records giving bandname and title."
       />
     </section>
-    <script src="https://button.glitch.me/button.js" defer></script>
+    <script src="script.js"></script>
   </body>
 </html>
